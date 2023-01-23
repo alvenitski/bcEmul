@@ -5,8 +5,28 @@ body{
     color:rgb(217, 221, 220);
     display: flex;
     justify-content: center;
+    z-index: 5;
 }
 
+/*Ajout Background Image */
+#background{
+    background-color:  rgb(40,40,40);
+    opacity: 100%;
+    z-index: 5;
+    padding: 0px 20px
+}
+
+body::before{ 
+    width: 100%;
+    height: 250%;   
+    content: "";
+    background-image: url('files/background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0.2;
+    z-index: -1;
+}
 
 #title{
     margin-bottom: 50px;
@@ -33,8 +53,8 @@ h1{
     "vinyl comments contacts"
     "digital comments contacts"
     "footer footer footer";
-    grid-template-columns: 500px 500px 200px;
-    grid-template-rows: 60px 600px 600px 60px;
+    grid-template-columns: 500px 500px 120px;
+    grid-template-rows: 80px 600px 600px 60px;
     row-gap: 10px;
     column-gap: 10px; 
     opacity: 100%;
@@ -49,11 +69,16 @@ nav{
     justify-content: flex-start;
     align-items: flex-end;
     font-size: 16px;
-    height : 50px;
+    height : 40px;
+    width: 100%;
+    position: relative;
+    right: 20px;
     font-weight: bold;
     list-style: none;
     background-color: rgb(30,30,30);
     margin-bottom: 30px;
+    padding: 10px 20px;
+    
 }
 
 a{
@@ -143,11 +168,9 @@ a:active{
     margin-right: 5px
 }
 
-
 #digital{
     grid-area: digital;
 }
-
 
 /*Stylisation Section Contacts */
 #contacts{
@@ -160,7 +183,6 @@ h3{
 #contacts p{
     margin-top: 0px;
 }
-
 
 #bouton{
     height: 40px;
@@ -196,11 +218,15 @@ footer img{
 }
 
 /*Responsive Design */
-@media only screen and (max-width:768px){ 
+@media only screen and (max-width: 1024px){ 
     #grid{
-        width: 100%;
         display: block;
         justify-content: center;
+    }
+   
+
+    #background{
+        width: 70%;
     }
 
     #vinyl{
@@ -248,5 +274,10 @@ footer img{
     #contacts{
         margin-top: -100px;
     }
+
+    body::before{ 
+        height: 350%;   
+    }
+    
 
 }
