@@ -4,64 +4,72 @@
 <head>
     <title>The Safe Inside Chronicles</title>
     <link href="./style.css" rel="stylesheet">
+    <meta name="viewport" content="width-device-width" initial-scale=1>
 </head>
 
 <body>
-    <nav>
-        <li><a href="#vinyl">Vinyl</a></li>
-        <li><a href="#digital">Digital</a></li>
-        <li><a href="#contacts">Contacts</a></li>
-    </nav>
-    <main>
-        <section id="vinyl">
-            <div id="title">
-                <h1>The Safe Inside Chronicles</h1>
-                <p> par <span>MindSpring Memories</span> </p>
-            </div>
-            
-            <h2>Millenium Edition 12" Vinyl</h2>
-            <p> Disque/vinyle + album numérique</p>
-            <div id="vinylitem">
-                <div id="vimg">
-                    <div class="img-container-1">
-                        <img src="./files/vimg1.jpg" />
-                    </div>
-                    <div class="img-container-1">
-                        <img src="./files/vimg2.jpg" />
-                    </div>
-                    <div class="img-container-1">
-                        <img src="./files/vimg3.jpg" />
-                    </div>
-                    <div class="img-container-1">
-                        <img src="./files/vimg4.jpg" />
-                    </div>
+
+    <div id="background"> <!--Sans cette ligne, le justify-content de body ne fonctionne pas -->
+        <div id="grid">
+            <nav>
+                <li><a href="#vinyl">Vinyl</a></li>
+                <li><a href="#digital">Digital</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </nav>
+            <section id="vinyl">
+                <div id="title">
+                    <h1>The Safe Inside Chronicles</h1>
+                    <p> par <span>MindSpring Memories</span> </p>
                 </div>
-                <div id="vdescri">
-                    <ul>
-                        <li>Clear vinyl with colored splatter</li>
-                        <li>140g vinyl audiophile grade</li>
-                        <li>Mastering by Angel Hail</li>
-                        <li>Poly-lined with Inner Sleeve</li>
-                        <li>Squre Insert 2 sides prints</li>
-                        <li>Full color Printed Sleeves 300gms</li>
-                    </ul>
-                <div id="buy">
-                    <p>Comprend l’écoute en continu illimitée de The Safe Inside Chronicles,
-                        ainsi que le téléchargement de haute qualité aux formats MP3, FLAC et plus.</p>
-                    <p id="stock"> sera expédié d’ici 10 jours
-                        <br>edition de 150 exemplaires
-                    </p>
-                    <h3 id="buy" class="bleu">Acheter le disque/vinyl</h3>
-                </div>      
+    
+                <h2>Millenium Edition 12" Vinyl</h2>
+                <p> Disque/vinyle + album numérique</p>
+                <div id="vinylitem">
+                    <div id="vimg">
+                        <div class="img-container-1">
+                            <img id="img1" src="./files/vimg1.jpg" />
+                        </div>
+                        <div class="img-container-1">
+                            <img id="img2" src="./files/vimg2.jpg" />
+                        </div>
+                        <div class="img-container-1">
+                            <img id="img3" src="./files/vimg3.jpg" />
+                        </div>
+                        <div class="img-container-1">
+                            <img id="img4" src="./files/vimg4.jpg" />
+                        </div>
+                    </div>
+                    <script src="resizePics.js"></script>
+    
+    
+                    <div id="vdescri">
+                        <ul>
+                            <li>Clear vinyl with colored splatter</li>
+                            <li>140g vinyl audiophile grade</li>
+                            <li>Mastering by Angel Hail</li>
+                            <li>Poly-lined with Inner Sleeve</li>
+                            <li>Squre Insert 2 sides prints</li>
+                            <li>Full color Printed Sleeves 300gms</li>
+                        </ul>
+                        <div id="buy">
+                            <p>Comprend l’écoute en continu illimitée de The Safe Inside Chronicles,
+                                ainsi que le téléchargement de haute qualité aux formats MP3, FLAC et plus.</p>
+                            <p id="stock"> sera expédié d’ici 10 jours
+                                <br>edition de 150 exemplaires
+                            </p>
+                            <h3 id="buy" class="bleu">Acheter le disque/vinyl</h3>
+                        </div>
             </section>
             <section id="comments">
                 <div id="mainimg">
-                    <img src="./files/mainImage.jpg" alt="Album Cover" />
+                    <img id="maincover" src="./files/mainImage.jpg" alt="Album Cover" />
                 </div>
+                
+    
                 <div class="coms">
-                    <div  id="com1" class="combox">
-                        <div class="picbox"> 
-                            <img src="./files/comment1.jpg"/>
+                    <div id="com1" class="combox">
+                        <div class="picbox">
+                            <img src="./files/comment1.jpg" />
                         </div>
                         <p><span>jammingdevice</span> Weird, long meditations born of mid-90s samples repeated with
                             cavernous reverb.
@@ -69,85 +77,73 @@
                             wallpaper.</p>
                     </div>
                     <div id="com2" class="combox">
-                        <div class="picbox"> 
-                            <img src="./files/comment2.jpg"/>
+                        <div class="picbox">
+                            <img src="./files/comment2.jpg" />
                         </div>
                         <p><span>synthbent</span> Genuinely healing energies from this beautiful release.
                             How did I only just discover this artist. </p>
                     </div>
                     <div id="com3" class="combox">
-                        <div class="picbox"> 
-                            <img src="./files/comment3.jpg"/>
+                        <div class="picbox">
+                            <img src="./files/comment3.jpg" />
                         </div>
                         <p><span>D_HILL_Art</span> Albums like these are landmarks in their own respective genres.
                             Piste favorite : Safe Inside IV.</p>
                     </div>
-                    <div id="com4" class="combox">
-                        <div class="picbox"> 
-                            <img src="./files/comment4.jpg"/>
-                        </div>
-                        <p><span>dBask</span> I'm a simple man, I see Mindspring Memories, I click buy.
-                            Piste favorite : Safe Inside III.</p>
-                    </div>
-                    <div id="com5" class="combox">
-                        <div class="picbox"> 
-                            <img src="./files/comment5.jpg"/>
-                        </div>
-                        
-                        <p><span>Cardian Matsu</span> he slush of this EP is undeniable.
-                            really an album to just sit back and float away into hazy vistas of woods and
-                            mountainsides.
-                            Piste favorite : Safe Inside II.</p>
-                    </div>
-                    <div id="deploycom">
-                        <p>plus de commentaires</p>
-                    </div>
+    
+    
+                    <a id="deploycom" class="bleu">plus de commentaires</a>
+                    <script src="./deployComment.js"></script>
+    
                 </div>
             </section>
-
-        </section>
-        <section id="digital">
-            <h2>Digital Album</h2>
-            <figure>
-                <figcaption>Safe Inside I</figcaption>
-                <audio controls src="./files/msm/Safe Inside I.mp3"></audio>
-            </figure>
-            <figure>
-                <figcaption>Safe Inside II</figcaption>
-                <audio controls src=./files/msm/Safe Inside II.mp3"></audio>
-            </figure>
-            <figure>
-                <figcaption>Safe Inside III</figcaption>
-                <audio controls src="./files/msm/Safe Inside III.mp3"></audio>
-            </figure>
-            <figure>
-                <figcaption>Safe Inside IV</figcaption>
-                <audio controls src="./files/msm/Safe Inside IV.mp3"></audio>
-            </figure>
-            <p>à propos
-                <br>The Safe Inside album
-                <br>Better Living in a Digital World
-                <br>Underwater Computing_ wishes you a wonderful summer
-                <br>UC_3
-            </p>
-
-        </section>
-        <section id="contacts">
-            <img src="./files/UC.jpg" alt="Label Logo"/>
-            <h3>Underwater Computing_</h3>
-            <p class="bleu">Colmar, France</p>
-            <a class="button">Suivre</a>
-            
-        </section>
-    </main>
-    <footer>
-        <img src="./files/bclogo.jpg" />
-        <p> bandcamp elumator designed by Alven.</p>
-        <p> 2023</p>
-    </footer>
-
-
+    
+            </section>
+            <section id="digital">
+                <h2>Digital Album</h2>
+                <figure>
+                    <figcaption>Safe Inside I</figcaption>
+                    <audio controls src="./files/msm/Safe Inside I.mp3"></audio>
+                </figure>
+                <figure>
+                    <figcaption>Safe Inside II</figcaption>
+                    <audio controls src=./files/msm/Safe Inside II.mp3"></audio>
+                </figure>
+                <figure>
+                    <figcaption>Safe Inside III</figcaption>
+                    <audio controls src="./files/msm/Safe Inside III.mp3"></audio>
+                </figure>
+                <figure>
+                    <figcaption>Safe Inside IV</figcaption>
+                    <audio controls src="./files/msm/Safe Inside IV.mp3"></audio>
+                </figure>
+                <p>à propos
+                    <br>The Safe Inside album
+                    <br>Better Living in a Digital World
+                    <br>Underwater Computing_ wishes you a wonderful summer
+                    <br>UC_3
+                </p>
+    
+            </section>
+            <section id="contacts">
+                <img src="./files/UC.jpg" alt="Label Logo" />
+                <h3>Underwater Computing_</h3>
+                <p class="bleu">Colmar, France</p>
+                <button id="bouton">Suivre</button>
+                <script src="./texteBouton.js"></script>
+    
+            </section>
+            <footer>
+                <div id="logo-container">
+                    <img src="./files/bclogo.jpg" />
+                </div>
+    
+                <p> bandcamp elumator designed by Alven.</p>
+                <p> 2023</p>
+            </footer>
+        </div>
 
 </body>
+
 
 </html>

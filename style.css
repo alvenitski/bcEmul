@@ -1,12 +1,12 @@
 body{
-    width: 900px;
+    width: 100%;
     background-color: rgb(40,40,40);
     font: helvetica;
     color:rgb(217, 221, 220);
+    display: flex;
     justify-content: center;
-    align-content: center;
-    
 }
+
 
 #title{
     margin-bottom: 50px;
@@ -20,8 +20,31 @@ h1{
     margin-top: 5px;
 }
 
-/*Stylsation navig en flexbox */
+.bleu{
+    color :rgb(54, 123, 212);
+}
+
+/* Creation Grid Template Area */
+#grid{
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "nav nav nav"
+    "vinyl comments contacts"
+    "digital comments contacts"
+    "footer footer footer";
+    grid-template-columns: 500px 500px 200px;
+    grid-template-rows: 60px 600px 600px 60px;
+    row-gap: 10px;
+    column-gap: 10px; 
+    opacity: 100%;
+    z-index: 4;
+}
+
+
+/*Stylisation navig en flexbox */
 nav{
+    grid-area: nav;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -32,12 +55,13 @@ nav{
     background-color: rgb(30,30,30);
     margin-bottom: 30px;
 }
- 
+
 a{
     margin-right: 20px;
     text-decoration: none;
     color :rgb(220, 220, 220);
 }
+
 
 a:link{
     text-decoration: none;
@@ -50,33 +74,22 @@ a:visited{
 a:hover{
     text-decoration: underline;
     color :rgb(220, 220, 220);
+    cursor : pointer;
 }
 a:active{
     text-decoration:none;
     color :rgb(220, 220, 220);
 }
 
-/* Stylisation main content en grid */
-main{
-    display: grid;
-    width: 100%;
-    grid-template: repeat(2, 1fr)/repeat(5, 1fr);
-    row-gap: 10px;
-    column-gap: 10px; 
-}
-
-
 
 /*Stylisation Section Vinyl*/
 #vinyl{
-    grid-row: 1/2;
-    grid-column: 1/3;
+    grid-area: vinyl;
 }
 
 #vimg{
     display: flex;
     margin-right: 10px;
-
 }
 
 .img-container-1{
@@ -85,25 +98,28 @@ main{
     width: 70px;
     padding : 0 10px;
 }
+.img-container-1:hover{
+    cursor: pointer;
+}
 
 .img-container-1 img{
     height: 100%;
     width: 100%;
 }
 
-.bleu{
-    color :rgb(54, 123, 212);
-}
-/*Stylisation section comment */
+
+/*Stylisation Section Comment */
 #comments{
-    grid-row: 1/2;
-    grid-column: 3/5;
+    grid-area: comments
 }
 
-#mainimg img{
-    height: 90%;
-    width: 90%;
-    margin-bottom: 10px
+#maincover{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+#maincover:hover{
+    cursor: pointer;
 }
 
 .combox {
@@ -126,27 +142,16 @@ main{
     width: 40px;
     margin-right: 5px
 }
-/* CSS animation
-#com4{
-    visibility: hidden;
-}
-
-#com5{
-    visibility: hidden;
-}
-*/
 
 
 #digital{
-    grid-row: 2/4;
-    grid-column: 1/3
+    grid-area: digital;
 }
 
 
-/*Stylisation Contacts */
+/*Stylisation Section Contacts */
 #contacts{
-    grid-row: 1/4;
-    grid-column: 5/6;
+    grid-area: contacts;
 }
 
 h3{
@@ -156,10 +161,92 @@ h3{
     margin-top: 0px;
 }
 
-.button{
-    padding: 10px 30px;
+
+#bouton{
+    height: 40px;
+    width: 120px;
+    background-color:rgb(54, 123, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color:rgb(54, 123, 212);
     border: 1px solid rgb(54, 123, 212);
     border-radius: 2px;
-    color: white
+    color: white;
+}
+
+#bouton:hover{
+    cursor: pointer;
+}
+
+/*Stylisation Footer */
+footer{
+   grid-area: footer;
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+#logo-container{
+    width: 120px;
+    height: 30px;
+}
+footer img{
+    width: 100%;
+    height: 100%;
+}
+
+/*Responsive Design */
+@media only screen and (max-width:768px){ 
+    #grid{
+        width: 100%;
+        display: block;
+        justify-content: center;
+    }
+
+    #vinyl{
+        max-width: 300px;
+    }
+
+    .coms {
+        max-width: 300px;
+    }
+
+    #title{
+        margin-bottom: 180px;
+    }
+
+    #maincover{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 150px;
+        position: relative;
+        bottom:630px;
+    }
+
+    #bouton{
+        margin-bottom : 20px;
+    }
+    
+    footer p{
+        font-size: 10px;
+    }
+    
+    #logo-container{
+        width: 80px;
+        height: 15px;
+    }
+
+    .coms{
+        margin-top: -160px;
+    }
+
+    #digital p{
+        visibility: hidden;
+    }
+
+    #contacts{
+        margin-top: -100px;
+    }
+
 }
