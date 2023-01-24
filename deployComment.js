@@ -18,7 +18,6 @@
                                     'mountainsides.' +
                                     'Piste favorite : Safe Inside II.</p>' +
                                 '</div>' +
-                                /*'<a id="remove"> Show less comments</a>'+*/
                         '</div>';
     //Creation variable eventTarget
     let eventTarget = document.getElementById('deploycom');
