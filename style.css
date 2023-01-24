@@ -5,6 +5,7 @@ body{
     color:rgb(217, 221, 220);
     display: flex;
     justify-content: center;
+    align-items: center;
     z-index: 5;
 }
 
@@ -13,12 +14,13 @@ body{
     background-color:  rgb(40,40,40);
     opacity: 100%;
     z-index: 5;
-    padding: 0px 20px
+    padding: 0px 20px;
+    
 }
 
 body::before{ 
     width: 100%;
-    height: 250%;   
+    height: 200%;   
     content: "";
     background-image: url('files/background.jpg');
     background-size: cover;
@@ -26,6 +28,7 @@ body::before{
     position: absolute;
     opacity: 0.2;
     z-index: -1;
+    
 }
 
 #title{
@@ -58,7 +61,6 @@ h1{
     row-gap: 10px;
     column-gap: 10px; 
     opacity: 100%;
-    z-index: 4;
 }
 
 
@@ -168,6 +170,10 @@ a:active{
     margin-right: 5px
 }
 
+#removecom{
+    visibility: hidden;
+}
+/*Stylisation Section Digital */
 #digital{
     grid-area: digital;
 }
