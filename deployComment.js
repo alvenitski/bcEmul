@@ -1,6 +1,6 @@
 //Creation fonction permettant de deployer plus de commentaires//
     //Creation de nouvelles variables avec nouveau contenu :
-    let addComments = '<div id="addComs">' +
+    let addComments = '<div id="addedComs">' +
                             '<div id="com4" class="combox">' +
                                 '<div class="picbox">'+
                                     '<img src="./files/comment4.jpg" />'+
@@ -18,14 +18,23 @@
                                     'mountainsides.' +
                                     'Piste favorite : Safe Inside II.</p>' +
                                 '</div>' +
-                                '<a id="remove"> Show less comments</a>'+
+                                /*'<a id="remove"> Show less comments</a>'+*/
                         '</div>';
     //Creation variable eventTarget
     let eventTarget = document.getElementById('deploycom');
+    let removeButton =  document.getElementById('removecom');
 
     //Creation fonction qui permet de deployer nouveaux commentaires
     function addComs(){
-        eventTarget.innerHTML = addComments 
+        eventTarget.innerHTML = addComments;
+        removeButton.style.visibility = "visible";
+
     }
     eventTarget.addEventListener('click', addComs)
 
+    // Creation fonction qui annule le deployement
+    function removeComs(){
+        eventTarget.innerHTML = "plus de commentaires";
+        removeButton.style.visibility = "hidden";
+    }
+    removeButton.addEventListener('click', removeComs)
